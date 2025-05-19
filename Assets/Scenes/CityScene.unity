@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 290415600}
   - component: {fileID: 290415602}
   - component: {fileID: 290415601}
+  - component: {fileID: 290415603}
   m_Layer: 5
   m_Name: GarbageTruckPlace
   m_TagString: Untagged
@@ -306,6 +307,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290415599}
   m_CullTransparentMesh: 1
+--- !u!114 &290415603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290415599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36832bce2a2c5fa43b0754fe67d2924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1501582249}
 --- !u!1 &370857328
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +526,7 @@ GameObject:
   - component: {fileID: 605131680}
   - component: {fileID: 605131682}
   - component: {fileID: 605131681}
+  - component: {fileID: 605131683}
   m_Layer: 5
   m_Name: MedicPlace
   m_TagString: Medic
@@ -576,6 +591,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605131679}
   m_CullTransparentMesh: 1
+--- !u!114 &605131683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605131679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36832bce2a2c5fa43b0754fe67d2924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1501582249}
 --- !u!1 &1027226098
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +818,7 @@ GameObject:
   - component: {fileID: 1366168332}
   - component: {fileID: 1366168334}
   - component: {fileID: 1366168333}
+  - component: {fileID: 1366168335}
   m_Layer: 5
   m_Name: SchoolBusPlace
   m_TagString: School
@@ -854,6 +883,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366168331}
   m_CullTransparentMesh: 1
+--- !u!114 &1366168335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366168331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36832bce2a2c5fa43b0754fe67d2924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1501582249}
 --- !u!1 &1371442685
 GameObject:
   m_ObjectHideFlags: 0
