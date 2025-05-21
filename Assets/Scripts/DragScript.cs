@@ -73,7 +73,7 @@ public class DragScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
             else
             {
                 objectScript.lastDragged = null;
-                // Varētu tālāk pārbaudīt vai visas mašīnas ir savā vietā
+                
             }
             objectScript.rightPlace = false;
         }

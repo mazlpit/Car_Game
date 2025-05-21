@@ -2,48 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
 public class CameraScript : MonoBehaviour
 {
     public float maxZoom = 300f;
     public float minZoom = 150f;
-    public float zoomSpeed = 5f;
-    public float moveSpeed = 5f;
-
-    private Camera cam;
+    public float followSpeed = 5f;
+    Vector3 bottomLeft, topRight;
+    float cameraMaxX, cameraMaxY, cameraMinX, cameraMinY, x, y;
+    public Camera cam;
 
     void Start()
     {
         cam = GetComponent<Camera>();
+        topRight = cam.ScreenToWorldPoint(new Vector3(
+            cam.pixelWidth, cam.pixelHeight, -transform.position.z));
+        bottomLeft = cam.ScreenToWorldPoint(new Vector3(
+            0, 0, -transform.position.z));
 
-        // Make sure the camera is set to Orthographic
-        if (!cam.orthographic)
-        {
-            Debug.LogWarning("Camera is not set to Orthographic. Zoom won't work correctly.");
-        }
+        cameraMaxX = topRight.x;
+        cameraMaxY = topRight.y;
+        cameraMinX = bottomLeft.x;
+        cameraMinY = bottomLeft.y;
     }
 
+   
+    
     void Update()
     {
-        HandleMovement();
-        HandleZoom();
-    }
+        x = Input.GetAxis("Mouse X") * followSpeed;
+        y = Input.GetAxis("Mouse Y") * followSpeed;
+        transform.Translate(x, y, 0);
 
-    void HandleMovement()
-    {
-        float moveX = Input.GetAxis("Mouse X") * moveSpeed * Time.deltaTime;
-        float moveY = Input.GetAxis("Mouse Y") * moveSpeed * Time.deltaTime;
-        transform.Translate(moveX, moveY, 0);
-    }
-
-    void HandleZoom()
-    {
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-
-        if (Mathf.Abs(scroll) > 0.01f)
+        if(Input.GetAxis("Mouse ScrollWheel") > 0 &&
+            cam.orthographicSize > minZoom)
         {
-            cam.orthographicSize -= scroll * zoomSpeed * 100f * Time.deltaTime;
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, minZoom, maxZoom);
+            cam.orthographicSize = cam.orthographicSize - 50f;
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 &&
+            cam.orthographicSize < maxZoom)
+        {
+            cam.orthographicSize = cam.orthographicSize + 50f;
         }
     }
 }

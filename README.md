@@ -10,7 +10,7 @@ jāveic pēc iespējas ātrāk.
 - [x] Izkārtot spēles laukumu (karte) un izvietot automašīnas
 - [x] Izstrādāt DragAndDrop skriptu
 - [x] Ieviest skaņas efektus un mūziku. 
-- [ ] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
+- [x] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
 - [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
 - [ ] Izstrādāt sākuma ainu
 - [ ] Ieviest taimeri
