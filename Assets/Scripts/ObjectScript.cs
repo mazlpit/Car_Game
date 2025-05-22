@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ObjectScript : MonoBehaviour
 {
+    public TimerDisplay timerDisplay;
+    public CompletionScreen completionScreen;
+    [HideInInspector] public int correctCount = 0;
+
     public GameObject garbageTruck;
     public GameObject schoolBus;
     public GameObject medic;
@@ -36,8 +40,7 @@ public class ObjectScript : MonoBehaviour
     [HideInInspector] public bool rightPlace = false;
     public GameObject lastDragged = null;
 
-    public TimerDisplay timerDisplay; // Assign in Inspector
-    public int correctCount = 0;      // Track correct placements
+
 
     void Start()
     {

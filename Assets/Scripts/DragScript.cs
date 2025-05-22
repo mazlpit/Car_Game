@@ -36,7 +36,7 @@ public class DragScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
             Debug.Log("Begin Drag: " + gameObject.name);
             canvasGroup.alpha = 0.6f;
             canvasGroup.blocksRaycasts = false;
-            rectTransform.SetSiblingIndex(50);
+            rectTransform.SetSiblingIndex(24);
 
         }
     }

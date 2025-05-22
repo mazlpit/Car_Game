@@ -13,12 +13,12 @@ public class TransformScript : MonoBehaviour
             if(Input.GetKey(KeyCode.Z))
             {
                 objectScript.lastDragged.GetComponent<RectTransform>().
-                    transform.Rotate(0, 0 , Time.deltaTime * 12f);
+                    transform.Rotate(0, 0 , Time.deltaTime * 45f);
             }
             if (Input.GetKey(KeyCode.X))
             {
                 objectScript.lastDragged.GetComponent<RectTransform>().
-                    transform.Rotate(0, 0, -Time.deltaTime * 12f);
+                    transform.Rotate(0, 0, -Time.deltaTime * 45f);
             }
 
             if(Input.GetKey(KeyCode.UpArrow))

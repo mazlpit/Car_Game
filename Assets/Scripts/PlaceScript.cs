@@ -20,17 +20,18 @@ public class PlaceScript : MonoBehaviour, IDropHandler
             placeZRotation = eventData.pointerDrag.GetComponent<RectTransform>().transform.eulerAngles.z;
             carZRotation = GetComponent<RectTransform>().transform.eulerAngles.z;
             difZRotation = Mathf.Abs(placeZRotation - carZRotation);
+
             placeSize = eventData.pointerDrag.GetComponent<RectTransform>().localScale;
             carSize = GetComponent<RectTransform>().localScale;
             xSizeDif = Mathf.Abs(placeSize.x - carSize.x);
             ySizeDif = Mathf.Abs(placeSize.y - carSize.y);
 
             if ((difZRotation <= 10 || (difZRotation >= 350 && difZRotation <= 360)) &&
-                (xSizeDif <= 0.2 && ySizeDif <= 0.2))
+                (xSizeDif <= 0.2f && ySizeDif <= 0.2f))
             {
                 objectScript.rightPlace = true;
 
-                // Align position/rotation/scale
+                // Snap position, rotation, scale
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
                     GetComponent<RectTransform>().anchoredPosition;
                 eventData.pointerDrag.GetComponent<RectTransform>().localRotation =
@@ -38,7 +39,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().localScale =
                     GetComponent<RectTransform>().localScale;
 
-                // Play correct sound
+                // Play success sound
                 switch (eventData.pointerDrag.tag)
                 {
                     case "Garbage": objectScript.audioSource.PlayOneShot(objectScript.audioClips[2]); break;
@@ -56,12 +57,13 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                     default: Debug.LogError("Unknown tag!"); break;
                 }
 
-                // Increment correct count and stop timer if all are placed
+                // ✅ Count and check for game completion
                 objectScript.correctCount++;
                 if (objectScript.correctCount >= 12)
                 {
                     objectScript.timerDisplay.StopTimer();
-                    Debug.Log(" All cars have been placed! Timer stopped.");
+                    float finalTime = objectScript.timerDisplay.GetTime();
+                    objectScript.completionScreen.ShowCompletion(finalTime);
                 }
             }
         }
@@ -70,7 +72,6 @@ public class PlaceScript : MonoBehaviour, IDropHandler
             objectScript.rightPlace = false;
             objectScript.audioSource.PlayOneShot(objectScript.audioClips[1]);
 
-            // Reset position on incorrect placement
             switch (eventData.pointerDrag.tag)
             {
                 case "Garbage": objectScript.garbageTruck.GetComponent<RectTransform>().localPosition = objectScript.gTruckPos; break;

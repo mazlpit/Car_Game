@@ -20,4 +20,4 @@ public class SceneChangeScript : MonoBehaviour
         Application.Quit();
     }
 
-}
+}
