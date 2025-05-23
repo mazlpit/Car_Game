@@ -9,6 +9,11 @@ public class SceneChangeScript : MonoBehaviour
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
+    public void ToUIScene2()
+    {
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
+
 
     public void ToMainMenu()
     {

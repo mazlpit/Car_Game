@@ -8,11 +8,11 @@ public class CompletionScreen : MonoBehaviour
     public Image[] stars;
     public Text timeText;
     public TimerDisplay timer;
-    public Button playAgainButton; // 👈 Add this in Inspector
+    public Button playAgainButton; 
 
     void Start()
     {
-        // Hook up the button at runtime
+        
         playAgainButton.onClick.AddListener(RestartGame);
     }
 
