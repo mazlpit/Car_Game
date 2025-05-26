@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19677411, g: 0.2666426, b: 0.38204297, a: 1}
+  m_IndirectSpecularColor: {r: 0.19677411, g: 0.26664263, b: 0.38204297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2463,7 +2463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 30, y: -1.1991882}
+  m_AnchoredPosition: {x: 30, y: -1.1991577}
   m_SizeDelta: {x: -608.5174, y: -268.4017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116051474
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   cementTruckPos: {x: 0, y: 0}
   diggingTractorPos: {x: 0, y: 0}
   policePos: {x: 0, y: 0}
-  audioSource: {fileID: 1027226099}
+  audioSource: {fileID: 0}
   audioClips:
   - {fileID: 8300000, guid: ae2b0744edd3f2f409704a11d4da2d85, type: 3}
   - {fileID: 8300000, guid: 159af36dc67c21b4dba65852e03c2f51, type: 3}

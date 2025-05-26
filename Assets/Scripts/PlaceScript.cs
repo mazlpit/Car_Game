@@ -31,7 +31,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
             {
                 objectScript.rightPlace = true;
 
-                // Snap position, rotation, scale
+                
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
                     GetComponent<RectTransform>().anchoredPosition;
                 eventData.pointerDrag.GetComponent<RectTransform>().localRotation =
@@ -39,7 +39,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().localScale =
                     GetComponent<RectTransform>().localScale;
 
-                // Play success sound
+                
                 switch (eventData.pointerDrag.tag)
                 {
                     case "Garbage": objectScript.audioSource.PlayOneShot(objectScript.audioClips[2]); break;
