@@ -12,10 +12,12 @@ public class TimerDisplay : MonoBehaviour
         if (!isRunning) return;
 
         time += Time.deltaTime;
-        int minutes = (int)(time / 60);
+
+        int hours = (int)(time / 3600);
+        int minutes = (int)((time % 3600) / 60);
         int seconds = (int)(time % 60);
-        int milliseconds = (int)((time * 1000) % 1000);
-        timerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:000}";
+
+        timerText.text = $"{hours:00}:{minutes:00}:{seconds:00}";
     }
 
     public void StopTimer()

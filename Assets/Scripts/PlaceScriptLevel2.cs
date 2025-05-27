@@ -27,7 +27,7 @@ public class PlaceScriptLevel2 : MonoBehaviour, IDropHandler
             ySizeDif = Mathf.Abs(placeSize.y - carSize.y);
 
             if ((difZRotation <= 10 || (difZRotation >= 350 && difZRotation <= 360)) &&
-                (xSizeDif <= 0.1f && ySizeDif <= 0.1f))
+                (xSizeDif <= 0.2f && ySizeDif <= 0.2f))
             {
                 objectScriptLevel2.rightPlace = true;
 
@@ -42,19 +42,19 @@ public class PlaceScriptLevel2 : MonoBehaviour, IDropHandler
                 
                 switch (eventData.pointerDrag.tag)
                 {
-                    case "tungtung": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[2]); break;
-                    case "chimpanzini": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[2]); break;
+                    case "tungtung": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[6]); break;
+                    case "chimpanzini": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[3]); break;
                     case "sports": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[2]); break;
-                    case "tank": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[2]); break;
-                    case "tralala": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[2]); break;
-                    case "brr": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[2]); break;
+                    case "tank": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[5]); break;
+                    case "tralala": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[4]); break;
+                    case "brr": objectScriptLevel2.audioSource.PlayOneShot(objectScriptLevel2.audioClips[7]); break;
 
                     default: Debug.LogError("Unknown tag!"); break;
                 }
 
                 
                 objectScriptLevel2.correctCount++;
-                if (objectScriptLevel2.correctCount >= 12)
+                if (objectScriptLevel2.correctCount >= 6)
                 {
                     objectScriptLevel2.timerDisplay.StopTimer();
                     float finalTime = objectScriptLevel2.timerDisplay.GetTime();

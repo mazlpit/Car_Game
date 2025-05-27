@@ -57,7 +57,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                     default: Debug.LogError("Unknown tag!"); break;
                 }
 
-                // ✅ Count and check for game completion
+                
                 objectScript.correctCount++;
                 if (objectScript.correctCount >= 12)
                 {
