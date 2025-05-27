@@ -2,77 +2,77 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransformScript : MonoBehaviour
+public class TransformScriptLevel2 : MonoBehaviour
 {
-    public ObjectScript objectScript;
+    public ObjectScriptLevel2 objectScriptLevel2;
 
     void Update()
     {
-        if(objectScript.lastDragged != null)
+        if(objectScriptLevel2.lastDragged != null)
         {
             if(Input.GetKey(KeyCode.Z))
             {
-                objectScript.lastDragged.GetComponent<RectTransform>().
+                objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                     transform.Rotate(0, 0 , Time.deltaTime * 45f);
             }
             if (Input.GetKey(KeyCode.X))
             {
-                objectScript.lastDragged.GetComponent<RectTransform>().
+                objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                     transform.Rotate(0, 0, -Time.deltaTime * 45f);
             }
 
             if(Input.GetKey(KeyCode.UpArrow))
             {
-                if (objectScript.lastDragged.
+                if (objectScriptLevel2.lastDragged.
                     GetComponent<RectTransform>().transform.localScale.y < 1.5f)
                 {
-                    objectScript.lastDragged.GetComponent<RectTransform>().
+                    objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale = new Vector2(
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.x,
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.y + 0.01f);
                 }
             }
 
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                if (objectScript.lastDragged.
+                if (objectScriptLevel2.lastDragged.
                     GetComponent<RectTransform>().transform.localScale.y > 0.5f)
                 {
-                    objectScript.lastDragged.GetComponent<RectTransform>().
+                    objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale = new Vector2(
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.x,
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.y - 0.01f);
                 }
             }
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                if (objectScript.lastDragged.
+                if (objectScriptLevel2.lastDragged.
                     GetComponent<RectTransform>().transform.localScale.x > 0.5f)
                 {
-                    objectScript.lastDragged.GetComponent<RectTransform>().
+                    objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale = new Vector2(
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.x - 0.01f,
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.y); ;
                 }
             }
 
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                if (objectScript.lastDragged.
+                if (objectScriptLevel2.lastDragged.
                     GetComponent<RectTransform>().transform.localScale.x < 1.5f)
                 {
-                    objectScript.lastDragged.GetComponent<RectTransform>().
+                    objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale = new Vector2(
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.x + 0.01f,
-                        objectScript.lastDragged.GetComponent<RectTransform>().
+                        objectScriptLevel2.lastDragged.GetComponent<RectTransform>().
                         transform.localScale.y); ;
                 }
             }

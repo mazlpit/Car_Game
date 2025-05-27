@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42188197, g: 0.51664865, b: 0.63362896, a: 1}
+  m_IndirectSpecularColor: {r: 0.42188194, g: 0.51664865, b: 0.63362896, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -893,6 +893,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1440374844}
   - component: {fileID: 1440374845}
+  - component: {fileID: 1440374846}
+  - component: {fileID: 1440374849}
+  - component: {fileID: 1440374848}
+  - component: {fileID: 1440374847}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -924,40 +928,89 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440374843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d12269a3bb28e084da8c07a300c6836e, type: 3}
+  m_Script: {fileID: 11500000, guid: 48e2511d613675741bb3d40ce1fa4be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timerDisplay: {fileID: 0}
   completionScreen: {fileID: 0}
   correctCount: 0
-  garbageTruck: {fileID: 0}
-  schoolBus: {fileID: 0}
-  medic: {fileID: 0}
-  b2: {fileID: 0}
-  e46: {fileID: 0}
-  e61: {fileID: 0}
-  excavator: {fileID: 0}
-  fireTruck: {fileID: 0}
-  farmingTractor: {fileID: 0}
-  cementTruck: {fileID: 0}
-  diggingTractor: {fileID: 0}
-  police: {fileID: 0}
-  gTruckPos: {x: 0, y: 0}
-  sBusPos: {x: 0, y: 0}
-  medicPos: {x: 0, y: 0}
-  b2Pos: {x: 0, y: 0}
-  e46Pos: {x: 0, y: 0}
-  e61Pos: {x: 0, y: 0}
-  excavatorPos: {x: 0, y: 0}
-  fireTruckPos: {x: 0, y: 0}
-  farmingTractorPos: {x: 0, y: 0}
-  cementTruckPos: {x: 0, y: 0}
-  diggingTractorPos: {x: 0, y: 0}
-  policePos: {x: 0, y: 0}
+  tungtung: {fileID: 1855126790}
+  chimpanzini: {fileID: 671942398}
+  sports: {fileID: 2128350109}
+  tank: {fileID: 2019417215}
+  tralala: {fileID: 1626957932}
+  brr: {fileID: 2145089590}
+  tungtungPos: {x: 0, y: 0}
+  chimpanziniPos: {x: 0, y: 0}
+  sportsPos: {x: 0, y: 0}
+  tankPos: {x: 0, y: 0}
+  tralalaPos: {x: 0, y: 0}
+  brrPos: {x: 0, y: 0}
   audioSource: {fileID: 0}
-  audioClips: []
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   rightPlace: 0
   lastDragged: {fileID: 0}
+--- !u!114 &1440374846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440374843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5002e2a10e59af4aa23b293ed88ba77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScriptLevel2: {fileID: 1440374845}
+--- !u!114 &1440374847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440374843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfcc9cb0a37a93445982811be253b137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completionPanel: {fileID: 0}
+  stars: []
+  timeText: {fileID: 0}
+  timer: {fileID: 0}
+  playAgainButton: {fileID: 0}
+--- !u!114 &1440374848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440374843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fe7d6c3be12b848928566a77c8dcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+--- !u!114 &1440374849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440374843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5752bf76b4024a4ebeed8e6a888c95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1626957932
 GameObject:
   m_ObjectHideFlags: 0
